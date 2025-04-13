@@ -41,3 +41,28 @@ console.log(result7.length, email.length)
 
 let result8 = email.split()
 console.log(result8)
+
+const title = 'Rastamojka qachon ochiladi ?! yohud Monopoliya Respublikasi !'
+const author = "Lag'mon makazi"
+const likes = 35000000
+
+let result9 =
+	'Bu post nomi ' +
+	title +
+	' ' +
+	author +
+	' tomonidan yozilgan. ' +
+	'va bu postda ' +
+	likes +
+	' ta like bor'
+
+let result10 = `Bu post nomi ${title}, ${author} tomonidan yozilgan. Va bu postda ${likes} ta like bor`
+
+let result11 = `
+     <h2>${title}</h2>
+     <p>${author} tomonidan yozilgan</p>
+     <span>${title}</span>
+ `
+console.log(result9)
+console.log(result10)
+console.log(result11)

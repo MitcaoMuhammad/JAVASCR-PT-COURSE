@@ -31,3 +31,5 @@ console.log(5 / 'salom')
 console.log(5 * 'salom')
 
 let result4 = 'the blog has ' + likes + 'likes'
+
+console.log(result4)
