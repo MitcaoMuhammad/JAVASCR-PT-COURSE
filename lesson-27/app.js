@@ -10,8 +10,13 @@ const user = {
 	logout: function () {
 		console.log('Siz bu saytdagi sahifangizni tark etdingiz.')
 	},
-	speak: function () {},
+	speak: function () {
+		console.log(this)
+		console.log('I can speak:')
+		this.langs.forEach(lang => {
+			console.log(lang)
+		})
+	},
 }
 
-user.login()
-user.logout()
+user.speak()
