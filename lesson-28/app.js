@@ -19,4 +19,19 @@ const user = {
 	},
 }
 
-user.speak()
+const movies = [
+	{ name: 'Avatar', likes: 456 },
+	{ name: 'Harry Potter', likes: 484 },
+	{ name: 'Titanic', likes: 987 },
+	{ name: 'Sitve Jobs', likes: 156 },
+	{ name: 'Sherlock', likes: 574 },
+]
+
+movies.forEach(movie => {
+	// console.log(movie.name)
+	// console.log(movie.likes)
+	const result = `Kino nomi: ${movie.name}, Likes: ${movie.likes}`
+	console.log(result)
+})
+
+user.moviesWatch()
