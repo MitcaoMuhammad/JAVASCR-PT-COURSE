@@ -1,4 +1,4 @@
-const getTodos = collback => {
+const getTodos = (resurse, collback) => {
 	const request = new XMLHttpRequest()
 
 	request.addEventListener('readystatechange', () => {
@@ -10,15 +10,16 @@ const getTodos = collback => {
 		}
 	})
 
-	request.open('GET', 'todos.json')
+	request.open('GET', resurse)
 	request.send()
 }
 
-getTodos((err, data) => {
-	console.log('Callback function işiga tushdi !!!')
-	if (err) {
-		console.log(err)
-	} else {
+getTodos('todos/ahror.json', (err, data) => {
+	console.log(data)
+	getTodos('todos/sardor.json', (err, data) => {
 		console.log(data)
-	}
+		getTodos('todos/doniyor.json', (err, data) => {
+			console.log(data)
+		})
+	})
 })
