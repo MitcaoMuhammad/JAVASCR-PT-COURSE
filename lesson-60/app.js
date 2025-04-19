@@ -3,13 +3,14 @@ const getTodos = collback => {
 
 	request.addEventListener('readystatechange', () => {
 		if (request.readyState === 4 && request.status === 200) {
-			collback(undefined, request.responseText)
+			const data = JSON.parse(request.responseText)
+			collback(undefined, data)
 		} else if (request.readyState === 4) {
 			collback("Ma'lumotni olishning iloji bo'lmadi !!!", undefined)
 		}
 	})
 
-	request.open('GET', 'https://jsonplaceholder.typicode.com/todos/')
+	request.open('GET', 'todos.json')
 	request.send()
 }
 
