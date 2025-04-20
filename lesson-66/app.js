@@ -1,6 +1,6 @@
 const APİ = 'https://restcountries.com/v3.1/all'
 
-const getData = resourcs => {
+/* const getData = resourcs => {
 	return new Promise((resolve, reject) => {
 		const request = new XMLHttpRequest()
 
@@ -25,14 +25,29 @@ getData(APİ)
 	.catch(err => {
 		console.log(err)
 	})
-
+*/
 // fetch
-fetch(APİ)
+/*fetch(APİ)
 	.then(data => {
 		return data.json
 	})
 	.then(dataJson => {
 		console.log(dataJson)
+	})
+	.catch(err => {
+		console.log(err)
+	})
+*/
+
+const getData = async resourcs => {
+	const request = await fetch(resourcs)
+	const data = await request.json()
+	return data
+}
+
+getData(APİ)
+	.then(data => {
+		console.log(data)
 	})
 	.catch(err => {
 		console.log(err)
